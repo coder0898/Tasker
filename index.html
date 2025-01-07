@@ -51,30 +51,101 @@
           <hr />
           <div class="data-content">
             <div class="data-card">
-              <h3>Total Task</h3>
+              <h3>
+                <span><i class="fa-solid fa-list"></i></span> Total Task
+              </h3>
               <p id="total-task">0</p>
             </div>
             <div class="data-card">
-              <h3>Pending Task</h3>
+              <h3>
+                <span><i class="fa-solid fa-clock"></i></span>Pending Task
+              </h3>
               <p id="pending-count">0</p>
             </div>
             <div class="data-card">
-              <h3>In-progress Task</h3>
+              <h3>
+                <span><i class="fa-solid fa-spinner"></i></span>In-progress Task
+              </h3>
               <p id="progress-count">0</p>
             </div>
             <div class="data-card">
-              <h3>Completed Task</h3>
+              <h3>
+                <span><i class="fa-solid fa-circle-check"></i></span>Completed
+                Task
+              </h3>
               <p id="completed-count">0</p>
             </div>
             <div class="data-card">
-              <h3>Overdue Task</h3>
+              <h3>
+                <span><i class="fa-solid fa-square-xmark"></i></span>Overdue
+                Task
+              </h3>
               <p id="overdue-count">0</p>
             </div>
           </div>
         </section>
         <!-- task section -->
         <section class="dashboard-content">
-          <h1>Task List</h1>
+          <div class="section-heading">
+            <h2>Task List</h2>
+          </div>
+          <hr />
+          <div class="lead-board">
+            <div class="data-card primary">
+              <h3>
+                <span><i class="fa-solid fa-list"></i></span>Total Task Count
+              </h3>
+              <p id="total-task">0</p>
+            </div>
+            <div class="data-card warning">
+              <h3>
+                <span><i class="fa-solid fa-clock"></i></span>Pending Task Count
+              </h3>
+              <p id="pending-count">0</p>
+            </div>
+            <div class="data-card success">
+              <h3>
+                <span><i class="fa-solid fa-circle-check"></i></span>Completed
+                Task Count
+              </h3>
+              <p id="completed-count">0</p>
+            </div>
+          </div>
+          <div class="task-container">
+            <div class="form-group">
+              <div class="input-container">
+                <input
+                  placeholder="Enter Name of task"
+                  class="input-field"
+                  id="inputVal"
+                  type="search"
+                />
+                <label for="input-field" class="input-label">Search Task</label>
+                <span class="input-highlight"></span>
+              </div>
+              <button>
+                <span><i class="fa-solid fa-plus"></i></span>Add Task
+              </button>
+            </div>
+            <table>
+              <caption>
+                All Task
+              </caption>
+              <thead>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Start Date</th>
+                <th>End Date</th>
+                <th>Assign to</th>
+                <th>Action</th>
+              </thead>
+              <tbody id="table-input">
+                <tr>
+                  <td colspan="6">loading...</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </section>
         <!-- profile section -->
         <section class="dashboard-content">
