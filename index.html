@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Management System(EMS)</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <span><i class="fa-solid fa-list-check"></i></span>
+        <h1>Tasker</h1>
+      </div>
+      <ul>
+        <li>Login/Logout</li>
+      </ul>
+    </header>
+    <main>
+      <div class="side-menu">
+        <div class="menu-logo">
+          <img src="./image/myAvatar.png" alt="avatar-image" />
+          <h2>User Name</h2>
+          <p>category</p>
+        </div>
+        <div class="tab-btns">
+          <button class="tabs-btn active-btn">
+            <span><i class="fa-solid fa-gauge"></i></span>DashBoard
+          </button>
+          <button class="tabs-btn">
+            <span><i class="fa-solid fa-bucket"></i></span> Task List
+          </button>
+          <button class="tabs-btn">
+            <span><i class="fa-solid fa-user"></i></span> Profile
+          </button>
+        </div>
+      </div>
+      <div class="container">
+        <!-- dashboard section -->
+        <section class="dashboard-content active">
+          <div class="section-heading">
+            <h2>DashBoard</h2>
+          </div>
+          <hr />
+          <div class="data-content">
+            <div class="data-card">
+              <h3>Total Task</h3>
+              <p id="total-task">0</p>
+            </div>
+            <div class="data-card">
+              <h3>Pending Task</h3>
+              <p id="pending-count">0</p>
+            </div>
+            <div class="data-card">
+              <h3>In-progress Task</h3>
+              <p id="progress-count">0</p>
+            </div>
+            <div class="data-card">
+              <h3>Completed Task</h3>
+              <p id="completed-count">0</p>
+            </div>
+            <div class="data-card">
+              <h3>Overdue Task</h3>
+              <p id="overdue-count">0</p>
+            </div>
+          </div>
+        </section>
+        <!-- task section -->
+        <section class="dashboard-content">
+          <h1>Task List</h1>
+        </section>
+        <!-- profile section -->
+        <section class="dashboard-content">
+          <h1>Profile</h1>
+        </section>
+      </div>
+    </main>
+    <footer>@copyright with Coder0898</footer>
+    <!-- javascript -->
+    <script src="index.js"></script>
+  </body>
+</html>
