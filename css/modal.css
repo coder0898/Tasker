@@ -1,0 +1,239 @@
+#modal-container {
+    position: fixed;
+    display: none;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    /* transform: scale(0); */
+    z-index: 1;
+}
+#modal-container.addTask-btn {
+    transform: scale(1);
+}
+#modal-container.addTask-btn .modal-background {
+    background: rgba(0, 0, 0, .0);
+    animation: fadeIn 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+#modal-container.addTask-btn .modal-background .modal {
+    opacity: 0;
+    animation: scaleUp 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+#modal-container.addTask-btn + .content {
+    animation: scaleBack 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+#modal-container.addTask-btn.out {
+    animation: quickScaleDown 0s 0.5s linear forwards;
+}
+#modal-container.addTask-btn.out .modal-background {
+    animation: fadeOut 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+#modal-container.addTask-btn.out .modal-background .modal {
+    animation: scaleDown 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+#modal-container.addTask-btn.out + .content {
+    animation: scaleForward 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+
+#modal-container .modal-background {
+    display: table-cell;
+    background: rgba(0, 0, 0, .8);
+    text-align: center;
+    vertical-align: middle;
+}
+#modal-container .modal-background .modal {
+    background: white;
+    display: inline-block;
+    border-radius: 3px;
+    font-weight: 300;
+    position: relative;
+    width: 400px;
+}
+
+.modal-background .modal .modal-heading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+}
+
+.modal-background .modal .modal-heading h3{
+    color: #6F00FF;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.modal-background .modal .modal-heading button{
+    color: #ED1B24;
+    font-size: 1.2rem;
+    font-weight: 400;
+    cursor: pointer;
+    background-color: #fff;
+    border: 0;
+    outline: 0;
+}
+
+.modal-background .modal .modal-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+/* .modal-background .modal .modal-content .input-group {
+    margin:20px 0; 
+    position:relative;
+} */
+
+.modal-background .modal .modal-content .input-group label {
+    margin-bottom: 5px;
+    float: left;
+}
+
+.modal-background .modal .modal-content .input-group input {
+    display:block;
+    width:100%;
+    padding:10px;   
+}
+
+.modal-background .modal .modal-content .error input {
+    border:3px red solid;
+}
+
+.modal-background .modal .modal-content .success input {
+    border:3px green solid;
+}
+
+.modal-background .modal .modal-content .input-group i {
+     position:absolute;
+     right:10px;
+     top:35px;
+     visibility: hidden;
+ }
+
+
+ .modal-background .modal .modal-content .success i.fa-check-circle{
+     visibility: visible;
+     color:green;
+ }
+
+ .modal-background .modal .modal-content .error i.fa-exclamation-circle {
+    visibility: visible;
+    color:red;
+}
+
+
+.modal-background .modal .modal-content .input-group p {
+     font-size: 15px;
+     color:red;
+     visibility: hidden;
+ }
+
+ .modal-background .modal .modal-content .error p {
+     visibility: visible;
+ }
+
+.modal-background .modal .modal-content  .input-group textarea{
+    height: 50px;
+    width: 100%;
+    outline: none;
+    font-size: 17px;
+    padding: 0 15px;
+    border-radius: 4px;
+    border: 1px solid #999;
+}
+
+.modal-background .modal .modal-content  .horization-form{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+    gap: 10px;
+}
+
+.modal-background .modal .modal-content form .horization-form .input-group{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.modal-background .modal .modal-content form .horization-form .input-group label{
+   font-size: 18px;
+   float: left;
+   margin-bottom: 6px;
+   color: #6F00FF;
+   font-weight: 600;
+}
+
+.modal-background .modal .modal-content  .horization-form .input-group input{
+    height: 35px;
+    width: 100%;
+    outline: none;
+    font-size: 15px;
+    padding: 0 15px;
+    border-radius: 4px;
+    border: 1px solid #999;
+}
+
+.modal-background .modal .modal-content  .horization-form .input-group select{
+    height: 35px;
+    width: 150px;
+    outline: none;
+    font-size: 15px;
+    padding: 0 15px;
+    border-radius: 4px;
+    border: 1px solid #999;
+}
+
+.modal-background .modal .modal-footer{
+    padding: 20px;
+    margin-top: -10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.modal-background .modal .modal-footer button{
+    width: 130px;
+    height: 35px;
+    font-size: 17px;
+    border: 0;
+    outline: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+}
+
+#reset-btn{
+    background-color: #6F00FF;
+    color: #fff;
+}
+
+ #reset-btn:hover{
+    background-color: #fff;
+    color: #6F00FF;
+    border: 2px solid #6F00FF;
+    font-weight: 600;
+}
+
+#submit-btn{
+    background-color: #4CBB17;
+    color: #fff;
+}
+
+#submit-btn:hover{
+    background-color: #fff;
+    color: #4CBB17;
+    border: 2px solid #4CBB17;
+    font-weight: 600;
+}
+
+/* toast notification */
+
