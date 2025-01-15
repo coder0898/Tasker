@@ -1,40 +1,42 @@
+html.modal-active, body.modal-active {
+    overflow: hidden;
+}
 #modal-container {
     position: fixed;
-    display: none;
+    display:table;
     height: 100%;
     width: 100%;
     top: 0;
     left: 0;
-    /* transform: scale(0); */
+    transform: scale(0);
     z-index: 1;
 }
-#modal-container.addTask-btn {
+#modal-container .two {
     transform: scale(1);
 }
-#modal-container.addTask-btn .modal-background {
+#modal-container .two .modal-background {
     background: rgba(0, 0, 0, .0);
     animation: fadeIn 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 }
-#modal-container.addTask-btn .modal-background .modal {
+#modal-container .two .modal-background .modal {
     opacity: 0;
     animation: scaleUp 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 }
-#modal-container.addTask-btn + .content {
+#modal-container .two + .dashboard-content {
     animation: scaleBack 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 }
-#modal-container.addTask-btn.out {
+#modal-container .two .out {
     animation: quickScaleDown 0s 0.5s linear forwards;
 }
-#modal-container.addTask-btn.out .modal-background {
+#modal-container .two .out .modal-background {
     animation: fadeOut 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 }
-#modal-container.addTask-btn.out .modal-background .modal {
+#modal-container .two .out .modal-background .modal {
     animation: scaleDown 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 }
-#modal-container.addTask-btn.out + .content {
+#modal-container .two .out + .dashboard-content {
     animation: scaleForward 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 }
-
 #modal-container .modal-background {
     display: table-cell;
     background: rgba(0, 0, 0, .8);
@@ -85,10 +87,10 @@
     margin-bottom: 15px;
 }
 
-/* .modal-background .modal .modal-content .input-group {
+.modal-background .modal .modal-content .input-group {
     margin:20px 0; 
     position:relative;
-} */
+}
 
 .modal-background .modal .modal-content .input-group label {
     margin-bottom: 5px;
@@ -233,6 +235,77 @@
     color: #4CBB17;
     border: 2px solid #4CBB17;
     font-weight: 600;
+}
+
+/* modal animation */
+@keyframes fadeIn {
+    0% {
+        background: rgba(0, 0, 0, .0);
+   }
+    100% {
+        background: rgba(0, 0, 0, .7);
+   }
+}
+
+@keyframes scaleUp {
+    0% {
+        transform: scale(0.8) translateY(1000px);
+        opacity: 0;
+   }
+    100% {
+        transform: scale(1) translateY(0px);
+        opacity: 1;
+   }
+}
+
+@keyframes scaleBack {
+    0% {
+        transform: scale(1);
+   }
+    100% {
+        transform: scale(0.85);
+   }
+}
+
+@keyframes quickScaleDown {
+    0% {
+        transform: scale(1);
+   }
+    99.9% {
+        transform: scale(1);
+   }
+    100% {
+        transform: scale(0);
+   }
+}
+
+@keyframes fadeOut {
+    0% {
+        background: rgba(0, 0, 0, .7);
+   }
+    100% {
+        background: rgba(0, 0, 0, .0);
+   }
+}
+
+@keyframes scaleDown {
+    0% {
+        transform: scale(1) translateY(0px);
+        opacity: 1;
+   }
+    100% {
+        transform: scale(0.8) translateY(1000px);
+        opacity: 0;
+   }
+}
+
+@keyframes scaleForward {
+    0% {
+        transform: scale(0.85);
+   }
+    100% {
+        transform: scale(1);
+   }
 }
 
 /* toast notification */

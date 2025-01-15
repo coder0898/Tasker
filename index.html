@@ -126,77 +126,17 @@
                   id="inputVal"
                   type="search"
                 />
-                <label for="input-field" class="input-label">Search Task</label>
+                <label for="inputVal" class="input-label">Search Task</label>
                 <span class="input-highlight"></span>
               </div>
-              <button id="addTask-btn">
+              <button id="addTask-btn" class="button">
                 <span><i class="fa-solid fa-plus"></i></span>Add Task
               </button>
             </div>
+            <!-- modal -->
             <div id="modal-container">
               <div class="modal-background">
-                <div class="modal">
-                  <div class="modal-heading">
-                    <h3>Add Task</h3>
-                    <button id="close-btn">
-                      <i class="fa-solid fa-xmark"></i>
-                    </button>
-                  </div>
-                  <div class="modal-content">
-                    <!-- Task title -->
-                    <div class="input-group">
-                      <label for="taskName">Task Title:</label>
-                      <input
-                        type="text"
-                        id="taskName"
-                        placeholder="Task Name"
-                        name="taskName"
-                      />
-                      <i class="fas fa-check-circle"></i>
-                      <i class="fas fa-exclamation-circle"></i>
-                      <p>Error Message</p>
-                    </div>
-                    <!-- Task Description -->
-                    <div class="input-group">
-                      <label for="taskdec">Task Description:</label>
-                      <textarea
-                        id="description-text"
-                        placeholder="task description"
-                        name="taskdec"
-                        required
-                      ></textarea>
-                      <i class="fas fa-check-circle"></i>
-                      <i class="fas fa-exclamation-circle"></i>
-                      <p>Error Message</p>
-                    </div>
-                    <div class="horization-form">
-                      <!-- End Date -->
-                      <div class="input-group">
-                        <label for="end-date">End Date:</label>
-                        <input type="date" id="end-date" name="end-date" />
-                        <i class="fas fa-check-circle"></i>
-                        <i class="fas fa-exclamation-circle"></i>
-                        <p>Error Message</p>
-                      </div>
-                      <!-- Assign To -->
-                      <div class="input-group">
-                        <label for="assign">Assign To:</label>
-                        <select id="task-assign" name="assign" required>
-                          <option value="">Select</option>
-                          <option value="user1">User 1</option>
-                          <option value="user2">User 2</option>
-                        </select>
-                        <i class="fas fa-check-circle"></i>
-                        <i class="fas fa-exclamation-circle"></i>
-                        <p>Error Message</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="modal-footer">
-                    <button id="reset-btn">Reset Form</button>
-                    <button id="submit-btn">Submit Form</button>
-                  </div>
-                </div>
+                <div class="modal"></div>
               </div>
             </div>
             <table>
