@@ -129,16 +129,57 @@
                 <label for="inputVal" class="input-label">Search Task</label>
                 <span class="input-highlight"></span>
               </div>
-              <button id="addTask-btn" class="button">
+              <button id="addTask-btn">
                 <span><i class="fa-solid fa-plus"></i></span>Add Task
               </button>
             </div>
             <!-- modal -->
             <div id="modal-container">
               <div class="modal-background">
-                <div class="modal"></div>
+                <div class="modal">
+                  <div class="modal-heading">
+                    <h3>Task Form</h3>
+                  </div>
+                  <div class="modal-content">
+                    <div class="form-group">
+                      <label for="task-title">Task Title</label>
+                      <input
+                        type="text"
+                        name="title"
+                        id="task-title"
+                        placeholder="title..."
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="description-text">Task Description</label>
+                      <textarea
+                        name="taskDesc"
+                        id="description-text"
+                      ></textarea>
+                    </div>
+                    <div class="horizontal-group">
+                      <div>
+                        <label for="end-date">End Date</label>
+                        <input type="date" name="endDate" id="end-date" />
+                      </div>
+                      <div>
+                        <label for="task-assign">Assign To</label>
+                        <select name="assign" id="task-assign">
+                          <option value="">Select</option>
+                          <option value="myself">Myself</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button id="close-btn">Cancel</button>
+                    <button id="reset-btn">Reset</button>
+                    <button id="submit-btn">Submit</button>
+                  </div>
+                </div>
               </div>
             </div>
+            <!-- task table -->
             <table>
               <caption>
                 All Task

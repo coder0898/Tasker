@@ -1,148 +1,82 @@
 html.modal-active, body.modal-active {
     overflow: hidden;
-}
-#modal-container {
+  }
+
+#modal-container{
     position: fixed;
-    display:table;
+    display: table;
     height: 100%;
     width: 100%;
-    top: 0;
+    top:0;
     left: 0;
     transform: scale(0);
     z-index: 1;
 }
-#modal-container .two {
+
+#modal-container.two{
     transform: scale(1);
 }
-#modal-container .two .modal-background {
-    background: rgba(0, 0, 0, .0);
-    animation: fadeIn 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
-}
-#modal-container .two .modal-background .modal {
-    opacity: 0;
-    animation: scaleUp 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
-}
-#modal-container .two + .dashboard-content {
-    animation: scaleBack 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
-}
-#modal-container .two .out {
-    animation: quickScaleDown 0s 0.5s linear forwards;
-}
-#modal-container .two .out .modal-background {
-    animation: fadeOut 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
-}
-#modal-container .two .out .modal-background .modal {
-    animation: scaleDown 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
-}
-#modal-container .two .out + .dashboard-content {
-    animation: scaleForward 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
-}
-#modal-container .modal-background {
+
+#modal-container .modal-background{
     display: table-cell;
-    background: rgba(0, 0, 0, .8);
-    text-align: center;
+    background: rgba(0, 0, 0, 0.8);
     vertical-align: middle;
+    text-align: center;
 }
+
 #modal-container .modal-background .modal {
     background: white;
+    padding: 20px;
     display: inline-block;
     border-radius: 3px;
     font-weight: 300;
     position: relative;
-    width: 400px;
-}
+  }
 
 .modal-background .modal .modal-heading{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid #ccc;
-    padding: 10px 20px;
     margin-bottom: 10px;
 }
 
 .modal-background .modal .modal-heading h3{
-    color: #6F00FF;
-    font-size: 1.2rem;
+    color: #fff;
+    background-color: #6F00FF;
+    font-size: 1.4rem;
     font-weight: 400;
 }
-
-.modal-background .modal .modal-heading button{
-    color: #ED1B24;
-    font-size: 1.2rem;
-    font-weight: 400;
-    cursor: pointer;
-    background-color: #fff;
-    border: 0;
-    outline: 0;
-}
-
 .modal-background .modal .modal-content{
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: baseline;
-    padding: 10px;
     border-bottom: 1px solid #ccc;
-    width: 100%;
     margin-bottom: 15px;
 }
 
-.modal-background .modal .modal-content .input-group {
-    margin:20px 0; 
-    position:relative;
+.modal-background .modal .modal-content .form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    margin-bottom: 10px;
+    margin-top: -20px;
+    margin-left: -10px;
 }
 
-.modal-background .modal .modal-content .input-group label {
+.modal-background .modal .modal-content .form-group label {
     margin-bottom: 5px;
-    float: left;
+    color: #6F00FF;
+    font-weight: 600;
+    font-size: 18px;
 }
 
-.modal-background .modal .modal-content .input-group input {
+.modal-background .modal .modal-content .form-group input {
     display:block;
     width:100%;
     padding:10px;   
 }
 
-.modal-background .modal .modal-content .error input {
-    border:3px red solid;
-}
-
-.modal-background .modal .modal-content .success input {
-    border:3px green solid;
-}
-
-.modal-background .modal .modal-content .input-group i {
-     position:absolute;
-     right:10px;
-     top:35px;
-     visibility: hidden;
- }
-
-
- .modal-background .modal .modal-content .success i.fa-check-circle{
-     visibility: visible;
-     color:green;
- }
-
- .modal-background .modal .modal-content .error i.fa-exclamation-circle {
-    visibility: visible;
-    color:red;
-}
-
-
-.modal-background .modal .modal-content .input-group p {
-     font-size: 15px;
-     color:red;
-     visibility: hidden;
- }
-
- .modal-background .modal .modal-content .error p {
-     visibility: visible;
- }
-
-.modal-background .modal .modal-content  .input-group textarea{
+.modal-background .modal .modal-content  .form-group textarea{
     height: 50px;
-    width: 100%;
+    width:100%;
     outline: none;
     font-size: 17px;
     padding: 0 15px;
@@ -150,23 +84,24 @@ html.modal-active, body.modal-active {
     border: 1px solid #999;
 }
 
-.modal-background .modal .modal-content  .horization-form{
+.modal-background .modal .modal-content  .horizontal-group{
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px;
     width: 100%;
     gap: 10px;
+    margin-bottom: 10px;
 }
 
-.modal-background .modal .modal-content form .horization-form .input-group{
+.modal-background .modal .modal-content  .horizontal-group div{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: baseline;
 }
 
-.modal-background .modal .modal-content form .horization-form .input-group label{
+.modal-background .modal .modal-content  .horizontal-group div label{
    font-size: 18px;
    float: left;
    margin-bottom: 6px;
@@ -174,7 +109,7 @@ html.modal-active, body.modal-active {
    font-weight: 600;
 }
 
-.modal-background .modal .modal-content  .horization-form .input-group input{
+.modal-background .modal .modal-content  .horizontal-group div input{
     height: 35px;
     width: 100%;
     outline: none;
@@ -184,7 +119,7 @@ html.modal-active, body.modal-active {
     border: 1px solid #999;
 }
 
-.modal-background .modal .modal-content  .horization-form .input-group select{
+.modal-background .modal .modal-content  .horizontal-group div select{
     height: 35px;
     width: 150px;
     outline: none;
@@ -195,15 +130,13 @@ html.modal-active, body.modal-active {
 }
 
 .modal-background .modal .modal-footer{
-    padding: 20px;
-    margin-top: -10px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
 
 .modal-background .modal .modal-footer button{
-    width: 130px;
+    width: 110px;
     height: 35px;
     font-size: 17px;
     border: 0;
@@ -211,6 +144,18 @@ html.modal-active, body.modal-active {
     border-radius: 5px;
     cursor: pointer;
     transition: all 0.4s ease-in-out;
+}
+
+#close-btn{
+    background-color: #E23D28;
+    color: #fff;
+}
+
+ #close-btn:hover{
+    background-color: #fff;
+    color: #E23D28;
+    border: 2px solid #E23D28;
+    font-weight: 600;
 }
 
 #reset-btn{
@@ -237,76 +182,91 @@ html.modal-active, body.modal-active {
     font-weight: 600;
 }
 
-/* modal animation */
-@keyframes fadeIn {
-    0% {
-        background: rgba(0, 0, 0, .0);
-   }
-    100% {
-        background: rgba(0, 0, 0, .7);
-   }
-}
+  #modal-container.two .modal-background {
+    background: rgba(0, 0, 0, 0);
+    animation: fadeIn 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+  }
+  #modal-container.two .modal-background .modal {
+    opacity: 0;
+    animation: scaleUp 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+  }
+  #modal-container.two + main {
+    animation: scaleBack 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+  }
+  #modal-container.two.out {
+    animation: quickScaleDown 0s 0.5s linear forwards;
+  }
+  #modal-container.two.out .modal-background {
+    animation: fadeOut 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+  }
+  #modal-container.two.out .modal-background .modal {
+    animation: scaleDown 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+  }
+  #modal-container.two.out + main {
+    animation: scaleForward 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+  }
 
-@keyframes scaleUp {
+  @keyframes fadeIn {
     0% {
-        transform: scale(0.8) translateY(1000px);
-        opacity: 0;
-   }
+      background: rgba(0, 0, 0, 0);
+    }
     100% {
-        transform: scale(1) translateY(0px);
-        opacity: 1;
-   }
-}
-
-@keyframes scaleBack {
+      background: rgba(0, 0, 0, 0.7);
+    }
+  }
+  @keyframes fadeOut {
     0% {
-        transform: scale(1);
-   }
+      background: rgba(0, 0, 0, 0.7);
+    }
     100% {
-        transform: scale(0.85);
-   }
-}
-
-@keyframes quickScaleDown {
+      background: rgba(0, 0, 0, 0);
+    }
+  }
+  @keyframes scaleUp {
     0% {
-        transform: scale(1);
-   }
+      transform: scale(0.8) translateY(1000px);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1) translateY(0px);
+      opacity: 1;
+    }
+  }
+  @keyframes scaleDown {
+    0% {
+      transform: scale(1) translateY(0px);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(0.8) translateY(1000px);
+      opacity: 0;
+    }
+  }
+  @keyframes scaleBack {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0.85);
+    }
+  }
+
+  @keyframes scaleForward {
+    0% {
+      transform: scale(0.85);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  @keyframes quickScaleDown {
+    0% {
+      transform: scale(1);
+    }
     99.9% {
-        transform: scale(1);
-   }
+      transform: scale(1);
+    }
     100% {
-        transform: scale(0);
-   }
-}
-
-@keyframes fadeOut {
-    0% {
-        background: rgba(0, 0, 0, .7);
-   }
-    100% {
-        background: rgba(0, 0, 0, .0);
-   }
-}
-
-@keyframes scaleDown {
-    0% {
-        transform: scale(1) translateY(0px);
-        opacity: 1;
-   }
-    100% {
-        transform: scale(0.8) translateY(1000px);
-        opacity: 0;
-   }
-}
-
-@keyframes scaleForward {
-    0% {
-        transform: scale(0.85);
-   }
-    100% {
-        transform: scale(1);
-   }
-}
-
-/* toast notification */
-
+      transform: scale(0);
+    }
+  }
